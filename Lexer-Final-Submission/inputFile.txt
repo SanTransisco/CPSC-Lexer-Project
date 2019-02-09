@@ -1,0 +1,57 @@
+[* this is comment for this sample code which
+converts Fahrenheit to Celsius *]
+[***]
+[** **]
+[**]
+[*** asdfasdf **]
+[***asdf*]
+[* asdf1234.1234.123.421.34.1234.$%$^#@**]
+
+&&and &1234&asdf& &asdf&
+
+1234FOOBaR
+
+BAR FOO0987
+asdf1234asdf
+1234
+asdf function convert12 1asdf
+1234.1234
+.1234
+.1234.1234...
+
+...1234
+..1234
+.1.1.22
+1234.1234.
+asdf&&&&asdfasdfasdf
+sadf5&%asdfasdf345345.3425%sdf
+&{}
+&&{+} {}&
+
+function conversion &( lastVar:
+
+&function conver&sion ( lastVar :  int) {}
+
+function convert12341234as(firstVar:real){ }
+
+function convert1x (fahr : int)
+{
+	return 5 * (fair-32) /9;
+}
+
+$$
+	int low, high, step; [* declaration *]
+
+get(low,high,step);
+while(low < high)
+	{ put(low);
+		put(convert1x (low));
+		low= low + step;
+	}
+	whileend
+
+$$
+
+
+[* erqrreg sdf
+[* asdf1234.1234.123.421.34.1234.$%$^#@*

@@ -1,0 +1,1033 @@
+<Rat18F>  ::=   <Opt Function Definitions>   $$  <Opt Declaration List>  <Statement List>  $$
+
+<Opt Function Definitions> ::= <Function Definitions> | <Empty>
+
+<Function Definitions>  ::= <Function> <Function Definition Prime>
+
+<Function> ::= function <Identifier> (<Opt Parameter List>) <Opt Declaration List> <Body>
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: $$
+********************************************************************************
+********************************************************************************
+*** FOUND *** Token: Keyword | Lexeme: int
+********************************************************************************
+<Opt Declaration List> ::= <Declaration List>   |    <Empty>
+
+<Declaration List>  ::= <Declaration> ; <Declaration List Prime>
+
+<Declaration> ::=   <Qualifier> <IDs>
+
+<Qualifier> ::= int     |    boolean    |  real
+
+********************************************************************************
+*** FOUND *** Token: Keyword | Lexeme: int
+********************************************************************************
+<IDs> ::=     <Identifier> <IDs_Prime>
+
+********************************************************************************
+*** FOUND *** Token: Identifier | Lexeme: i
+********************************************************************************
+<IDs_Prime> ::= ,<IDs> | ε
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: ,
+********************************************************************************
+<IDs> ::=     <Identifier> <IDs_Prime>
+
+********************************************************************************
+*** FOUND *** Token: Identifier | Lexeme: max
+********************************************************************************
+<IDs_Prime> ::= ,<IDs> | ε
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: ,
+********************************************************************************
+<IDs> ::=     <Identifier> <IDs_Prime>
+
+********************************************************************************
+*** FOUND *** Token: Identifier | Lexeme: sum
+********************************************************************************
+<IDs_Prime> ::= ,<IDs> | ε
+
+<Empty> ::=  ε
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: ;
+********************************************************************************
+<Declaration List Prime> ::=     <Declaration List> | ε
+
+<Declaration List>  ::= <Declaration> ; <Declaration List Prime>
+
+<Declaration> ::=   <Qualifier> <IDs>
+
+<Qualifier> ::= int     |    boolean    |  real
+
+<Statement List> ::=   <Statement> <Statement List Prime>
+
+<Statement> ::=   <Compound>  |  <Assign>  |   <If>  |  <Return>   | <Print>   |   <Scan>   |  <While>
+
+<Compound> ::=   {  <Statement List>  }
+
+<Assign> ::=     <Identifier> = <Expression> ;
+
+********************************************************************************
+*** FOUND *** Token: Identifier | Lexeme: sum
+********************************************************************************
+********************************************************************************
+*** FOUND *** Token: Operator | Lexeme: =
+********************************************************************************
+<Expression>  ::=   <Term><Expression Prime>
+
+<Term>    ::= <Factor> <Term Prime>
+
+<Factor> ::=      -  <Primary>    |    <Primary>
+
+<Primary> ::=     <Identifier>  |  <Integer>  |   <Identifier>  ( <IDs> )   |   ( <Expression> )   | <Real>  |   true   |  false
+
+********************************************************************************
+*** FOUND *** Token: Int | Lexeme: 0
+********************************************************************************
+<Term Prime>    ::= * <Factor> <Term Prime> | / <Factor> <Term Prime> |  ε
+
+<Empty> ::=  ε
+
+<Expression Prime>  ::=   + <Term> <Expression Prime> | - <Term> <Expression Prime> |  ε
+
+<Empty> ::=  ε
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: ;
+********************************************************************************
+<Statement List Prime> ::=   <Statement List> | ε
+
+<Statement List> ::=   <Statement> <Statement List Prime>
+
+<Statement> ::=   <Compound>  |  <Assign>  |   <If>  |  <Return>   | <Print>   |   <Scan>   |  <While>
+
+<Compound> ::=   {  <Statement List>  }
+
+<Assign> ::=     <Identifier> = <Expression> ;
+
+********************************************************************************
+*** FOUND *** Token: Identifier | Lexeme: i
+********************************************************************************
+********************************************************************************
+*** FOUND *** Token: Operator | Lexeme: =
+********************************************************************************
+<Expression>  ::=   <Term><Expression Prime>
+
+<Term>    ::= <Factor> <Term Prime>
+
+<Factor> ::=      -  <Primary>    |    <Primary>
+
+<Primary> ::=     <Identifier>  |  <Integer>  |   <Identifier>  ( <IDs> )   |   ( <Expression> )   | <Real>  |   true   |  false
+
+********************************************************************************
+*** FOUND *** Token: Int | Lexeme: 1
+********************************************************************************
+<Term Prime>    ::= * <Factor> <Term Prime> | / <Factor> <Term Prime> |  ε
+
+<Empty> ::=  ε
+
+<Expression Prime>  ::=   + <Term> <Expression Prime> | - <Term> <Expression Prime> |  ε
+
+<Empty> ::=  ε
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: ;
+********************************************************************************
+<Statement List Prime> ::=   <Statement List> | ε
+
+<Statement List> ::=   <Statement> <Statement List Prime>
+
+<Statement> ::=   <Compound>  |  <Assign>  |   <If>  |  <Return>   | <Print>   |   <Scan>   |  <While>
+
+<Compound> ::=   {  <Statement List>  }
+
+<Assign> ::=     <Identifier> = <Expression> ;
+
+<If> ::=     if  ( <Condition>  ) <Statement> <If Prime>
+
+<Return> ::=  return <Return Prime>
+
+<Print> ::=    put ( <Expression>);
+
+<Scan> ::=    get ( <IDs> );
+
+********************************************************************************
+*** FOUND *** Token: Keyword | Lexeme: get
+********************************************************************************
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: (
+********************************************************************************
+<IDs> ::=     <Identifier> <IDs_Prime>
+
+********************************************************************************
+*** FOUND *** Token: Identifier | Lexeme: max
+********************************************************************************
+<IDs_Prime> ::= ,<IDs> | ε
+
+<Empty> ::=  ε
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: )
+********************************************************************************
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: ;
+********************************************************************************
+<Statement List Prime> ::=   <Statement List> | ε
+
+<Statement List> ::=   <Statement> <Statement List Prime>
+
+<Statement> ::=   <Compound>  |  <Assign>  |   <If>  |  <Return>   | <Print>   |   <Scan>   |  <While>
+
+<Compound> ::=   {  <Statement List>  }
+
+<Assign> ::=     <Identifier> = <Expression> ;
+
+<If> ::=     if  ( <Condition>  ) <Statement> <If Prime>
+
+<Return> ::=  return <Return Prime>
+
+<Print> ::=    put ( <Expression>);
+
+<Scan> ::=    get ( <IDs> );
+
+<While> ::=  while ( <Condition>  )  <Statement>  whileend
+
+********************************************************************************
+*** FOUND *** Token: Keyword | Lexeme: while
+********************************************************************************
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: (
+********************************************************************************
+<Condition> ::=     <Expression>  <Relop>   <Expression>
+
+<Expression>  ::=   <Term><Expression Prime>
+
+<Term>    ::= <Factor> <Term Prime>
+
+<Factor> ::=      -  <Primary>    |    <Primary>
+
+<Primary> ::=     <Identifier>  |  <Integer>  |   <Identifier>  ( <IDs> )   |   ( <Expression> )   | <Real>  |   true   |  false
+
+<Term Prime>    ::= * <Factor> <Term Prime> | / <Factor> <Term Prime> |  ε
+
+<Empty> ::=  ε
+
+<Expression Prime>  ::=   + <Term> <Expression Prime> | - <Term> <Expression Prime> |  ε
+
+<Empty> ::=  ε
+
+<Relop> ::=        ==   |   ^=    |   >     |   <    |   =>    |   =<
+
+<Expression>  ::=   <Term><Expression Prime>
+
+<Term>    ::= <Factor> <Term Prime>
+
+<Factor> ::=      -  <Primary>    |    <Primary>
+
+<Primary> ::=     <Identifier>  |  <Integer>  |   <Identifier>  ( <IDs> )   |   ( <Expression> )   | <Real>  |   true   |  false
+
+<Term Prime>    ::= * <Factor> <Term Prime> | / <Factor> <Term Prime> |  ε
+
+<Empty> ::=  ε
+
+<Expression Prime>  ::=   + <Term> <Expression Prime> | - <Term> <Expression Prime> |  ε
+
+<Empty> ::=  ε
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: )
+********************************************************************************
+<Statement> ::=   <Compound>  |  <Assign>  |   <If>  |  <Return>   | <Print>   |   <Scan>   |  <While>
+
+<Compound> ::=   {  <Statement List>  }
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: {
+********************************************************************************
+<Statement List> ::=   <Statement> <Statement List Prime>
+
+<Statement> ::=   <Compound>  |  <Assign>  |   <If>  |  <Return>   | <Print>   |   <Scan>   |  <While>
+
+<Compound> ::=   {  <Statement List>  }
+
+<Assign> ::=     <Identifier> = <Expression> ;
+
+********************************************************************************
+*** FOUND *** Token: Identifier | Lexeme: sum
+********************************************************************************
+********************************************************************************
+*** FOUND *** Token: Operator | Lexeme: =
+********************************************************************************
+<Expression>  ::=   <Term><Expression Prime>
+
+<Term>    ::= <Factor> <Term Prime>
+
+<Factor> ::=      -  <Primary>    |    <Primary>
+
+<Primary> ::=     <Identifier>  |  <Integer>  |   <Identifier>  ( <IDs> )   |   ( <Expression> )   | <Real>  |   true   |  false
+
+<Term Prime>    ::= * <Factor> <Term Prime> | / <Factor> <Term Prime> |  ε
+
+<Empty> ::=  ε
+
+<Expression Prime>  ::=   + <Term> <Expression Prime> | - <Term> <Expression Prime> |  ε
+
+********************************************************************************
+*** FOUND *** Token: Operator | Lexeme: +
+********************************************************************************
+<Term>    ::= <Factor> <Term Prime>
+
+<Factor> ::=      -  <Primary>    |    <Primary>
+
+<Primary> ::=     <Identifier>  |  <Integer>  |   <Identifier>  ( <IDs> )   |   ( <Expression> )   | <Real>  |   true   |  false
+
+<Term Prime>    ::= * <Factor> <Term Prime> | / <Factor> <Term Prime> |  ε
+
+<Empty> ::=  ε
+
+<Expression Prime>  ::=   + <Term> <Expression Prime> | - <Term> <Expression Prime> |  ε
+
+<Empty> ::=  ε
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: ;
+********************************************************************************
+<Statement List Prime> ::=   <Statement List> | ε
+
+<Statement List> ::=   <Statement> <Statement List Prime>
+
+<Statement> ::=   <Compound>  |  <Assign>  |   <If>  |  <Return>   | <Print>   |   <Scan>   |  <While>
+
+<Compound> ::=   {  <Statement List>  }
+
+<Assign> ::=     <Identifier> = <Expression> ;
+
+********************************************************************************
+*** FOUND *** Token: Identifier | Lexeme: i
+********************************************************************************
+********************************************************************************
+*** FOUND *** Token: Operator | Lexeme: =
+********************************************************************************
+<Expression>  ::=   <Term><Expression Prime>
+
+<Term>    ::= <Factor> <Term Prime>
+
+<Factor> ::=      -  <Primary>    |    <Primary>
+
+<Primary> ::=     <Identifier>  |  <Integer>  |   <Identifier>  ( <IDs> )   |   ( <Expression> )   | <Real>  |   true   |  false
+
+<Term Prime>    ::= * <Factor> <Term Prime> | / <Factor> <Term Prime> |  ε
+
+<Empty> ::=  ε
+
+<Expression Prime>  ::=   + <Term> <Expression Prime> | - <Term> <Expression Prime> |  ε
+
+********************************************************************************
+*** FOUND *** Token: Operator | Lexeme: +
+********************************************************************************
+<Term>    ::= <Factor> <Term Prime>
+
+<Factor> ::=      -  <Primary>    |    <Primary>
+
+<Primary> ::=     <Identifier>  |  <Integer>  |   <Identifier>  ( <IDs> )   |   ( <Expression> )   | <Real>  |   true   |  false
+
+********************************************************************************
+*** FOUND *** Token: Int | Lexeme: 1
+********************************************************************************
+<Term Prime>    ::= * <Factor> <Term Prime> | / <Factor> <Term Prime> |  ε
+
+<Empty> ::=  ε
+
+<Expression Prime>  ::=   + <Term> <Expression Prime> | - <Term> <Expression Prime> |  ε
+
+<Empty> ::=  ε
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: ;
+********************************************************************************
+<Statement List Prime> ::=   <Statement List> | ε
+
+<Statement List> ::=   <Statement> <Statement List Prime>
+
+<Statement> ::=   <Compound>  |  <Assign>  |   <If>  |  <Return>   | <Print>   |   <Scan>   |  <While>
+
+<Compound> ::=   {  <Statement List>  }
+
+<Assign> ::=     <Identifier> = <Expression> ;
+
+<If> ::=     if  ( <Condition>  ) <Statement> <If Prime>
+
+<Return> ::=  return <Return Prime>
+
+<Print> ::=    put ( <Expression>);
+
+<Scan> ::=    get ( <IDs> );
+
+<While> ::=  while ( <Condition>  )  <Statement>  whileend
+
+<Empty> ::=  ε
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: }
+********************************************************************************
+********************************************************************************
+*** FOUND *** Token: Keyword | Lexeme: whileend
+********************************************************************************
+<Statement List Prime> ::=   <Statement List> | ε
+
+<Statement List> ::=   <Statement> <Statement List Prime>
+
+<Statement> ::=   <Compound>  |  <Assign>  |   <If>  |  <Return>   | <Print>   |   <Scan>   |  <While>
+
+<Compound> ::=   {  <Statement List>  }
+
+<Assign> ::=     <Identifier> = <Expression> ;
+
+<If> ::=     if  ( <Condition>  ) <Statement> <If Prime>
+
+<Return> ::=  return <Return Prime>
+
+<Print> ::=    put ( <Expression>);
+
+********************************************************************************
+*** FOUND *** Token: Keyword | Lexeme: put
+********************************************************************************
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: (
+********************************************************************************
+<Expression>  ::=   <Term><Expression Prime>
+
+<Term>    ::= <Factor> <Term Prime>
+
+<Factor> ::=      -  <Primary>    |    <Primary>
+
+<Primary> ::=     <Identifier>  |  <Integer>  |   <Identifier>  ( <IDs> )   |   ( <Expression> )   | <Real>  |   true   |  false
+
+<Term Prime>    ::= * <Factor> <Term Prime> | / <Factor> <Term Prime> |  ε
+
+<Empty> ::=  ε
+
+<Expression Prime>  ::=   + <Term> <Expression Prime> | - <Term> <Expression Prime> |  ε
+
+********************************************************************************
+*** FOUND *** Token: Operator | Lexeme: +
+********************************************************************************
+<Term>    ::= <Factor> <Term Prime>
+
+<Factor> ::=      -  <Primary>    |    <Primary>
+
+<Primary> ::=     <Identifier>  |  <Integer>  |   <Identifier>  ( <IDs> )   |   ( <Expression> )   | <Real>  |   true   |  false
+
+<Term Prime>    ::= * <Factor> <Term Prime> | / <Factor> <Term Prime> |  ε
+
+<Empty> ::=  ε
+
+<Expression Prime>  ::=   + <Term> <Expression Prime> | - <Term> <Expression Prime> |  ε
+
+<Empty> ::=  ε
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: )
+********************************************************************************
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: ;
+********************************************************************************
+<Statement List Prime> ::=   <Statement List> | ε
+
+<Statement List> ::=   <Statement> <Statement List Prime>
+
+<Statement> ::=   <Compound>  |  <Assign>  |   <If>  |  <Return>   | <Print>   |   <Scan>   |  <While>
+
+<Compound> ::=   {  <Statement List>  }
+
+<Assign> ::=     <Identifier> = <Expression> ;
+
+<If> ::=     if  ( <Condition>  ) <Statement> <If Prime>
+
+<Return> ::=  return <Return Prime>
+
+<Print> ::=    put ( <Expression>);
+
+<Scan> ::=    get ( <IDs> );
+
+<While> ::=  while ( <Condition>  )  <Statement>  whileend
+
+<Empty> ::=  ε
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: $$
+********************************************************************************
+Compilation Succesful
+Congratulations! Your syntax is 100% correct!
+<Rat18F>  ::=   <Opt Function Definitions>   $$  <Opt Declaration List>  <Statement List>  $$
+
+<Opt Function Definitions> ::= <Function Definitions> | <Empty>
+
+<Function Definitions>  ::= <Function> <Function Definition Prime>
+
+<Function> ::= function <Identifier> (<Opt Parameter List>) <Opt Declaration List> <Body>
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: $$
+********************************************************************************
+********************************************************************************
+*** FOUND *** Token: Keyword | Lexeme: int
+********************************************************************************
+<Opt Declaration List> ::= <Declaration List>   |    <Empty>
+
+<Declaration List>  ::= <Declaration> ; <Declaration List Prime>
+
+<Declaration> ::=   <Qualifier> <IDs>
+
+<Qualifier> ::= int     |    boolean    |  real
+
+********************************************************************************
+*** FOUND *** Token: Keyword | Lexeme: int
+********************************************************************************
+<IDs> ::=     <Identifier> <IDs_Prime>
+
+********************************************************************************
+*** FOUND *** Token: Identifier | Lexeme: i
+********************************************************************************
+<IDs_Prime> ::= ,<IDs> | ε
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: ,
+********************************************************************************
+<IDs> ::=     <Identifier> <IDs_Prime>
+
+********************************************************************************
+*** FOUND *** Token: Identifier | Lexeme: max
+********************************************************************************
+<IDs_Prime> ::= ,<IDs> | ε
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: ,
+********************************************************************************
+<IDs> ::=     <Identifier> <IDs_Prime>
+
+********************************************************************************
+*** FOUND *** Token: Identifier | Lexeme: sum
+********************************************************************************
+<IDs_Prime> ::= ,<IDs> | ε
+
+<Empty> ::=  ε
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: ;
+********************************************************************************
+<Declaration List Prime> ::=     <Declaration List> | ε
+
+<Declaration List>  ::= <Declaration> ; <Declaration List Prime>
+
+<Declaration> ::=   <Qualifier> <IDs>
+
+<Qualifier> ::= int     |    boolean    |  real
+
+<Statement List> ::=   <Statement> <Statement List Prime>
+
+<Statement> ::=   <Compound>  |  <Assign>  |   <If>  |  <Return>   | <Print>   |   <Scan>   |  <While>
+
+<Compound> ::=   {  <Statement List>  }
+
+<Assign> ::=     <Identifier> = <Expression> ;
+
+********************************************************************************
+*** FOUND *** Token: Identifier | Lexeme: sum
+********************************************************************************
+********************************************************************************
+*** FOUND *** Token: Operator | Lexeme: =
+********************************************************************************
+<Expression>  ::=   <Term><Expression Prime>
+
+<Term>    ::= <Factor> <Term Prime>
+
+<Factor> ::=      -  <Primary>    |    <Primary>
+
+<Primary> ::=     <Identifier>  |  <Integer>  |   <Identifier>  ( <IDs> )   |   ( <Expression> )   | <Real>  |   true   |  false
+
+********************************************************************************
+*** FOUND *** Token: Int | Lexeme: 0
+********************************************************************************
+<Term Prime>    ::= * <Factor> <Term Prime> | / <Factor> <Term Prime> |  ε
+
+<Empty> ::=  ε
+
+<Expression Prime>  ::=   + <Term> <Expression Prime> | - <Term> <Expression Prime> |  ε
+
+<Empty> ::=  ε
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: ;
+********************************************************************************
+<Statement List Prime> ::=   <Statement List> | ε
+
+<Statement List> ::=   <Statement> <Statement List Prime>
+
+<Statement> ::=   <Compound>  |  <Assign>  |   <If>  |  <Return>   | <Print>   |   <Scan>   |  <While>
+
+<Compound> ::=   {  <Statement List>  }
+
+<Assign> ::=     <Identifier> = <Expression> ;
+
+********************************************************************************
+*** FOUND *** Token: Identifier | Lexeme: i
+********************************************************************************
+********************************************************************************
+*** FOUND *** Token: Operator | Lexeme: =
+********************************************************************************
+<Expression>  ::=   <Term><Expression Prime>
+
+<Term>    ::= <Factor> <Term Prime>
+
+<Factor> ::=      -  <Primary>    |    <Primary>
+
+<Primary> ::=     <Identifier>  |  <Integer>  |   <Identifier>  ( <IDs> )   |   ( <Expression> )   | <Real>  |   true   |  false
+
+********************************************************************************
+*** FOUND *** Token: Int | Lexeme: 1
+********************************************************************************
+<Term Prime>    ::= * <Factor> <Term Prime> | / <Factor> <Term Prime> |  ε
+
+<Empty> ::=  ε
+
+<Expression Prime>  ::=   + <Term> <Expression Prime> | - <Term> <Expression Prime> |  ε
+
+<Empty> ::=  ε
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: ;
+********************************************************************************
+<Statement List Prime> ::=   <Statement List> | ε
+
+<Statement List> ::=   <Statement> <Statement List Prime>
+
+<Statement> ::=   <Compound>  |  <Assign>  |   <If>  |  <Return>   | <Print>   |   <Scan>   |  <While>
+
+<Compound> ::=   {  <Statement List>  }
+
+<Assign> ::=     <Identifier> = <Expression> ;
+
+<If> ::=     if  ( <Condition>  ) <Statement> <If Prime>
+
+<Return> ::=  return <Return Prime>
+
+<Print> ::=    put ( <Expression>);
+
+<Scan> ::=    get ( <IDs> );
+
+********************************************************************************
+*** FOUND *** Token: Keyword | Lexeme: get
+********************************************************************************
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: (
+********************************************************************************
+<IDs> ::=     <Identifier> <IDs_Prime>
+
+********************************************************************************
+*** FOUND *** Token: Identifier | Lexeme: max
+********************************************************************************
+<IDs_Prime> ::= ,<IDs> | ε
+
+<Empty> ::=  ε
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: )
+********************************************************************************
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: ;
+********************************************************************************
+<Statement List Prime> ::=   <Statement List> | ε
+
+<Statement List> ::=   <Statement> <Statement List Prime>
+
+<Statement> ::=   <Compound>  |  <Assign>  |   <If>  |  <Return>   | <Print>   |   <Scan>   |  <While>
+
+<Compound> ::=   {  <Statement List>  }
+
+<Assign> ::=     <Identifier> = <Expression> ;
+
+<If> ::=     if  ( <Condition>  ) <Statement> <If Prime>
+
+********************************************************************************
+*** FOUND *** Token: Keyword | Lexeme: if
+********************************************************************************
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: (
+********************************************************************************
+<Condition> ::=     <Expression>  <Relop>   <Expression>
+
+<Expression>  ::=   <Term><Expression Prime>
+
+<Term>    ::= <Factor> <Term Prime>
+
+<Factor> ::=      -  <Primary>    |    <Primary>
+
+<Primary> ::=     <Identifier>  |  <Integer>  |   <Identifier>  ( <IDs> )   |   ( <Expression> )   | <Real>  |   true   |  false
+
+<Term Prime>    ::= * <Factor> <Term Prime> | / <Factor> <Term Prime> |  ε
+
+<Empty> ::=  ε
+
+<Expression Prime>  ::=   + <Term> <Expression Prime> | - <Term> <Expression Prime> |  ε
+
+<Empty> ::=  ε
+
+<Relop> ::=        ==   |   ^=    |   >     |   <    |   =>    |   =<
+
+<Expression>  ::=   <Term><Expression Prime>
+
+<Term>    ::= <Factor> <Term Prime>
+
+<Factor> ::=      -  <Primary>    |    <Primary>
+
+<Primary> ::=     <Identifier>  |  <Integer>  |   <Identifier>  ( <IDs> )   |   ( <Expression> )   | <Real>  |   true   |  false
+
+<Term Prime>    ::= * <Factor> <Term Prime> | / <Factor> <Term Prime> |  ε
+
+<Empty> ::=  ε
+
+<Expression Prime>  ::=   + <Term> <Expression Prime> | - <Term> <Expression Prime> |  ε
+
+<Empty> ::=  ε
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: )
+********************************************************************************
+<Statement> ::=   <Compound>  |  <Assign>  |   <If>  |  <Return>   | <Print>   |   <Scan>   |  <While>
+
+<Compound> ::=   {  <Statement List>  }
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: {
+********************************************************************************
+<Statement List> ::=   <Statement> <Statement List Prime>
+
+<Statement> ::=   <Compound>  |  <Assign>  |   <If>  |  <Return>   | <Print>   |   <Scan>   |  <While>
+
+<Compound> ::=   {  <Statement List>  }
+
+<Assign> ::=     <Identifier> = <Expression> ;
+
+********************************************************************************
+*** FOUND *** Token: Identifier | Lexeme: sum
+********************************************************************************
+********************************************************************************
+*** FOUND *** Token: Operator | Lexeme: =
+********************************************************************************
+<Expression>  ::=   <Term><Expression Prime>
+
+<Term>    ::= <Factor> <Term Prime>
+
+<Factor> ::=      -  <Primary>    |    <Primary>
+
+<Primary> ::=     <Identifier>  |  <Integer>  |   <Identifier>  ( <IDs> )   |   ( <Expression> )   | <Real>  |   true   |  false
+
+<Term Prime>    ::= * <Factor> <Term Prime> | / <Factor> <Term Prime> |  ε
+
+<Empty> ::=  ε
+
+<Expression Prime>  ::=   + <Term> <Expression Prime> | - <Term> <Expression Prime> |  ε
+
+********************************************************************************
+*** FOUND *** Token: Operator | Lexeme: +
+********************************************************************************
+<Term>    ::= <Factor> <Term Prime>
+
+<Factor> ::=      -  <Primary>    |    <Primary>
+
+<Primary> ::=     <Identifier>  |  <Integer>  |   <Identifier>  ( <IDs> )   |   ( <Expression> )   | <Real>  |   true   |  false
+
+<Term Prime>    ::= * <Factor> <Term Prime> | / <Factor> <Term Prime> |  ε
+
+<Empty> ::=  ε
+
+<Expression Prime>  ::=   + <Term> <Expression Prime> | - <Term> <Expression Prime> |  ε
+
+<Empty> ::=  ε
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: ;
+********************************************************************************
+<Statement List Prime> ::=   <Statement List> | ε
+
+<Statement List> ::=   <Statement> <Statement List Prime>
+
+<Statement> ::=   <Compound>  |  <Assign>  |   <If>  |  <Return>   | <Print>   |   <Scan>   |  <While>
+
+<Compound> ::=   {  <Statement List>  }
+
+<Assign> ::=     <Identifier> = <Expression> ;
+
+********************************************************************************
+*** FOUND *** Token: Identifier | Lexeme: i
+********************************************************************************
+********************************************************************************
+*** FOUND *** Token: Operator | Lexeme: =
+********************************************************************************
+<Expression>  ::=   <Term><Expression Prime>
+
+<Term>    ::= <Factor> <Term Prime>
+
+<Factor> ::=      -  <Primary>    |    <Primary>
+
+<Primary> ::=     <Identifier>  |  <Integer>  |   <Identifier>  ( <IDs> )   |   ( <Expression> )   | <Real>  |   true   |  false
+
+<Term Prime>    ::= * <Factor> <Term Prime> | / <Factor> <Term Prime> |  ε
+
+<Empty> ::=  ε
+
+<Expression Prime>  ::=   + <Term> <Expression Prime> | - <Term> <Expression Prime> |  ε
+
+********************************************************************************
+*** FOUND *** Token: Operator | Lexeme: +
+********************************************************************************
+<Term>    ::= <Factor> <Term Prime>
+
+<Factor> ::=      -  <Primary>    |    <Primary>
+
+<Primary> ::=     <Identifier>  |  <Integer>  |   <Identifier>  ( <IDs> )   |   ( <Expression> )   | <Real>  |   true   |  false
+
+********************************************************************************
+*** FOUND *** Token: Int | Lexeme: 1
+********************************************************************************
+<Term Prime>    ::= * <Factor> <Term Prime> | / <Factor> <Term Prime> |  ε
+
+<Empty> ::=  ε
+
+<Expression Prime>  ::=   + <Term> <Expression Prime> | - <Term> <Expression Prime> |  ε
+
+<Empty> ::=  ε
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: ;
+********************************************************************************
+<Statement List Prime> ::=   <Statement List> | ε
+
+<Statement List> ::=   <Statement> <Statement List Prime>
+
+<Statement> ::=   <Compound>  |  <Assign>  |   <If>  |  <Return>   | <Print>   |   <Scan>   |  <While>
+
+<Compound> ::=   {  <Statement List>  }
+
+<Assign> ::=     <Identifier> = <Expression> ;
+
+<If> ::=     if  ( <Condition>  ) <Statement> <If Prime>
+
+<Return> ::=  return <Return Prime>
+
+<Print> ::=    put ( <Expression>);
+
+<Scan> ::=    get ( <IDs> );
+
+<While> ::=  while ( <Condition>  )  <Statement>  whileend
+
+<Empty> ::=  ε
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: }
+********************************************************************************
+<If prime > ::=     ifend | else <Statement> ifend
+
+********************************************************************************
+*** FOUND *** Token: Keyword | Lexeme: else
+********************************************************************************
+<Statement> ::=   <Compound>  |  <Assign>  |   <If>  |  <Return>   | <Print>   |   <Scan>   |  <While>
+
+<Compound> ::=   {  <Statement List>  }
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: {
+********************************************************************************
+<Statement List> ::=   <Statement> <Statement List Prime>
+
+<Statement> ::=   <Compound>  |  <Assign>  |   <If>  |  <Return>   | <Print>   |   <Scan>   |  <While>
+
+<Compound> ::=   {  <Statement List>  }
+
+<Assign> ::=     <Identifier> = <Expression> ;
+
+********************************************************************************
+*** FOUND *** Token: Identifier | Lexeme: sum
+********************************************************************************
+********************************************************************************
+*** FOUND *** Token: Operator | Lexeme: =
+********************************************************************************
+<Expression>  ::=   <Term><Expression Prime>
+
+<Term>    ::= <Factor> <Term Prime>
+
+<Factor> ::=      -  <Primary>    |    <Primary>
+
+<Primary> ::=     <Identifier>  |  <Integer>  |   <Identifier>  ( <IDs> )   |   ( <Expression> )   | <Real>  |   true   |  false
+
+********************************************************************************
+*** FOUND *** Token: Int | Lexeme: 8
+********************************************************************************
+<Term Prime>    ::= * <Factor> <Term Prime> | / <Factor> <Term Prime> |  ε
+
+<Empty> ::=  ε
+
+<Expression Prime>  ::=   + <Term> <Expression Prime> | - <Term> <Expression Prime> |  ε
+
+<Empty> ::=  ε
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: ;
+********************************************************************************
+<Statement List Prime> ::=   <Statement List> | ε
+
+<Statement List> ::=   <Statement> <Statement List Prime>
+
+<Statement> ::=   <Compound>  |  <Assign>  |   <If>  |  <Return>   | <Print>   |   <Scan>   |  <While>
+
+<Compound> ::=   {  <Statement List>  }
+
+<Assign> ::=     <Identifier> = <Expression> ;
+
+********************************************************************************
+*** FOUND *** Token: Identifier | Lexeme: sum
+********************************************************************************
+********************************************************************************
+*** FOUND *** Token: Operator | Lexeme: =
+********************************************************************************
+<Expression>  ::=   <Term><Expression Prime>
+
+<Term>    ::= <Factor> <Term Prime>
+
+<Factor> ::=      -  <Primary>    |    <Primary>
+
+<Primary> ::=     <Identifier>  |  <Integer>  |   <Identifier>  ( <IDs> )   |   ( <Expression> )   | <Real>  |   true   |  false
+
+********************************************************************************
+*** FOUND *** Token: Int | Lexeme: 10
+********************************************************************************
+<Term Prime>    ::= * <Factor> <Term Prime> | / <Factor> <Term Prime> |  ε
+
+<Empty> ::=  ε
+
+<Expression Prime>  ::=   + <Term> <Expression Prime> | - <Term> <Expression Prime> |  ε
+
+<Empty> ::=  ε
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: ;
+********************************************************************************
+<Statement List Prime> ::=   <Statement List> | ε
+
+<Statement List> ::=   <Statement> <Statement List Prime>
+
+<Statement> ::=   <Compound>  |  <Assign>  |   <If>  |  <Return>   | <Print>   |   <Scan>   |  <While>
+
+<Compound> ::=   {  <Statement List>  }
+
+<Assign> ::=     <Identifier> = <Expression> ;
+
+<If> ::=     if  ( <Condition>  ) <Statement> <If Prime>
+
+<Return> ::=  return <Return Prime>
+
+<Print> ::=    put ( <Expression>);
+
+<Scan> ::=    get ( <IDs> );
+
+<While> ::=  while ( <Condition>  )  <Statement>  whileend
+
+<Empty> ::=  ε
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: }
+********************************************************************************
+********************************************************************************
+*** FOUND *** Token: Keyword | Lexeme: ifend
+********************************************************************************
+<Statement List Prime> ::=   <Statement List> | ε
+
+<Statement List> ::=   <Statement> <Statement List Prime>
+
+<Statement> ::=   <Compound>  |  <Assign>  |   <If>  |  <Return>   | <Print>   |   <Scan>   |  <While>
+
+<Compound> ::=   {  <Statement List>  }
+
+<Assign> ::=     <Identifier> = <Expression> ;
+
+<If> ::=     if  ( <Condition>  ) <Statement> <If Prime>
+
+<Return> ::=  return <Return Prime>
+
+<Print> ::=    put ( <Expression>);
+
+********************************************************************************
+*** FOUND *** Token: Keyword | Lexeme: put
+********************************************************************************
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: (
+********************************************************************************
+<Expression>  ::=   <Term><Expression Prime>
+
+<Term>    ::= <Factor> <Term Prime>
+
+<Factor> ::=      -  <Primary>    |    <Primary>
+
+<Primary> ::=     <Identifier>  |  <Integer>  |   <Identifier>  ( <IDs> )   |   ( <Expression> )   | <Real>  |   true   |  false
+
+<Term Prime>    ::= * <Factor> <Term Prime> | / <Factor> <Term Prime> |  ε
+
+<Empty> ::=  ε
+
+<Expression Prime>  ::=   + <Term> <Expression Prime> | - <Term> <Expression Prime> |  ε
+
+********************************************************************************
+*** FOUND *** Token: Operator | Lexeme: +
+********************************************************************************
+<Term>    ::= <Factor> <Term Prime>
+
+<Factor> ::=      -  <Primary>    |    <Primary>
+
+<Primary> ::=     <Identifier>  |  <Integer>  |   <Identifier>  ( <IDs> )   |   ( <Expression> )   | <Real>  |   true   |  false
+
+<Term Prime>    ::= * <Factor> <Term Prime> | / <Factor> <Term Prime> |  ε
+
+<Empty> ::=  ε
+
+<Expression Prime>  ::=   + <Term> <Expression Prime> | - <Term> <Expression Prime> |  ε
+
+<Empty> ::=  ε
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: )
+********************************************************************************
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: ;
+********************************************************************************
+<Statement List Prime> ::=   <Statement List> | ε
+
+<Statement List> ::=   <Statement> <Statement List Prime>
+
+<Statement> ::=   <Compound>  |  <Assign>  |   <If>  |  <Return>   | <Print>   |   <Scan>   |  <While>
+
+<Compound> ::=   {  <Statement List>  }
+
+<Assign> ::=     <Identifier> = <Expression> ;
+
+<If> ::=     if  ( <Condition>  ) <Statement> <If Prime>
+
+<Return> ::=  return <Return Prime>
+
+<Print> ::=    put ( <Expression>);
+
+<Scan> ::=    get ( <IDs> );
+
+<While> ::=  while ( <Condition>  )  <Statement>  whileend
+
+<Empty> ::=  ε
+
+********************************************************************************
+*** FOUND *** Token: Separator | Lexeme: $$
+********************************************************************************
+Compilation Succesful
+Congratulations! Your syntax is 100% correct!

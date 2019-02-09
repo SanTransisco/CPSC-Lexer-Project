@@ -1,0 +1,24 @@
+[* this is comment for this sample code which
+   converts  Fahrenheit into Celcius *]
+[*Remember, there are no function declarations in our simplified RAT18F
+So the initial error was due to the fact that a function had previously existed
+here*]
+
+$$
+     int    low,  high, step;      [* declarations *]
+
+     get (low, high, step);
+     
+[*Now we have a problem below. We need to make sure low and high share the same type*]
+
+[*That seems easy enough, but don't forget about the fact that expressions are also possible. How do we take care of that?*]
+[*im thinking we have to look at the stack. Not at the lexeme itself -San*]
+[* after the <expression> production is finished, the calculated value is at the top of the stack or we are comparing it to a boolean value *]
+
+	while (low  <  high )  
+         {  put (low);
+             low =  low  +  step;
+         } 
+      whileend
+
+ $$

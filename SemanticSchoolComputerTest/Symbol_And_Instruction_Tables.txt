@@ -1,0 +1,39 @@
+Output:
+
+SYMBOL TABLE
+Identifier     Memory Location     Type           
+i                   5000           int       
+max                 5001           int       
+sum                 5002           int       
+
+INSTRUCTION TABLE
+Address   Operator  Operand
+1           PUSHI     0
+2           POPM      5002
+3           PUSHI     1
+4           POPM      5000
+5           STDIN     
+6           POPM      5001
+7           PUSHM     5000
+8           PUSHM     5001
+9           LES       
+10          JUMPZ     20
+11          PUSHM     5002
+12          PUSHM     5000
+13          ADD       
+14          POPM      5002
+15          PUSHM     5000
+16          PUSHI     1
+17          ADD       
+18          POPM      5000
+19          JUMP      25
+20          LABEL     
+21          PUSHI     8
+22          POPM      5002
+23          PUSHI     10
+24          POPM      5002
+25          LABEL     
+26          PUSHM     5002
+27          PUSHM     5001
+28          ADD       
+29          STDOUT    
